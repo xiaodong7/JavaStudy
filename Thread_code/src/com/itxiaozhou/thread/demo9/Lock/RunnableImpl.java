@@ -9,7 +9,7 @@ package com.itxiaozhou.thread.demo9.Lock;
 *       使用步骤：
 *       1.在成员变量位置中创建ReentrantLock类对象
 *       2.在可能出现线程安全问题代码前调用lock方法；
-*       3.在可能出现线程安全问题代码前调用lock方法；
+*       3.在可能出现线程安全问题代码后调用unLock方法；
 *       */
 
 import java.util.concurrent.locks.Lock;
@@ -37,7 +37,6 @@ public class RunnableImpl implements Runnable{
                 }finally {
                     l.unlock();//释放锁
                 }
-
             }
         }
 

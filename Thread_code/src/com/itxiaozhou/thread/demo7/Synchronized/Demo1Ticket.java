@@ -3,6 +3,7 @@ package com.itxiaozhou.thread.demo7.Synchronized;
 /*
 * 多线程 共享数据产生的安全问题
 * */
+@SuppressWarnings("all")
 public class Demo1Ticket {
     public static void main(String[] args) {
         RunnableImpl r = new RunnableImpl();//3个窗口共享100张票
@@ -12,5 +13,6 @@ public class Demo1Ticket {
         t0.start();
         t1.start();
         t2.start();
+
     }
 }

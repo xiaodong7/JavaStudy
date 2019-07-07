@@ -1,6 +1,6 @@
 package com.itxiaozhou.thread.demo6.ThreadSafe;
 //模拟卖票
-
+@SuppressWarnings("all")
 public class RunnableImpl implements Runnable{
 
     private int ticket = 100;//定义票数有100张票

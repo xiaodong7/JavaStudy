@@ -1,6 +1,6 @@
 package com.itxiaozhou.day07.demo2;
 
-import org.junit.Test;
+//import org.junit.Test;
 
 import java.util.Random;
 
@@ -14,7 +14,7 @@ public class Test01_Random {
         System.out.println((int) (Math.random()*31)+30);//输出打印[30,60]之间的随机整数
     }
 
-    @Test
+    //@Test
     /**
      * 获取1-n之间的随机数，包含n
      */

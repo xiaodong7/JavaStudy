@@ -1,10 +1,11 @@
 package com.itxiaozhou.demo2.Recursion;
 
 /*
-* 遍历文件下所有的文件夹和文件
-*
-* 需求:从这目录中  只要.java为结尾文件
-* */
+ * 遍历文件下所有的文件夹和文件
+ *
+ * 需求:从这目录中  只要.java为结尾文件
+ * */
+
 import java.io.File;
 
 public class Demo5DiGui {
@@ -18,14 +19,14 @@ public class Demo5DiGui {
         //遍历目录
         File[] files = f.listFiles();
         for (File file : files) {
-            if(file.isDirectory()){
+            if (file.isDirectory()) {
                 getAllFile(file);
-            }else {
+            } else {
                 //把file对象转为string对象
                 String ff = file.toString();
                 //判断文件是否是以.java结尾
                 boolean b = ff.endsWith(".java");
-                if(b){
+                if (b) {
                     System.out.println(file);
                 }
 

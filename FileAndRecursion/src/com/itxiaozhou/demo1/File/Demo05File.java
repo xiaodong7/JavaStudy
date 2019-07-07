@@ -5,9 +5,9 @@ import java.io.IOException;
 
 public class Demo05File {
     public static void main(String[] args) throws IOException {
-        //show01();
+        show01();
         //show02();
-        show03();
+        //show03();
     }
 
     /*
@@ -69,7 +69,10 @@ public class Demo05File {
         File f3 = new File("FileAndRecursion\\新建文件夹");
         System.out.println(f3.createNewFile());//不要被名称迷惑,要看文件类型
 
-        File f4 = new File("D:\\ideaPorject\\JavaStudy\\FileAndRecurs\\a.txt");
-        System.out.println(f4.createNewFile());//路径不存在,抛出IOException异常
+        /*File f4 = new File("D:\\ideaPorject\\JavaStudy\\FileAndRecurs\\a.txt");
+        System.out.println(f4.createNewFile());//路径不存在,抛出IOException异常*/
+
+        File f5 = new File("D:\\ideaPorject\\JavaStudy\\FileAndRecursion\\c.txt");
+        System.out.println(f5.createNewFile());
     }
 }

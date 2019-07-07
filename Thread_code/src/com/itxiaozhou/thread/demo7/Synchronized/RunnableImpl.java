@@ -17,7 +17,7 @@ package com.itxiaozhou.thread.demo7.Synchronized;
 *      把同步代码块锁住，只让一个线程在同步代码块中执行
 *
 * */
-
+@SuppressWarnings("all")
 public class RunnableImpl implements Runnable{
 
     private int ticket = 100;//定义票数有100张票
@@ -31,7 +31,7 @@ public class RunnableImpl implements Runnable{
         //每个窗口都在售票,每个窗口代表着一个线程
         while (true){
             //创建同步代码块
-            synchronized (obj){
+            synchronized (this){  //ctrl+alt+t  快捷键 选择  synchronized
                 if(ticket > 0){//判断是否有票
                     //模拟出票操作
                     try {
@@ -41,6 +41,8 @@ public class RunnableImpl implements Runnable{
                     }
                     System.out.println(Thread.currentThread().getName()+"正在卖票第"+ticket+"张票");
                     ticket--;
+                }else {
+                    break;
                 }
             }
         }

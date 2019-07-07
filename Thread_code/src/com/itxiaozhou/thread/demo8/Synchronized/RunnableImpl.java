@@ -7,8 +7,8 @@ package com.itxiaozhou.thread.demo8.Synchronized;
 *   第二种解决方案:使用同步方法
 *   使用步骤：
 *       1.将出现线程问题（访问了共享数据）的代码块抽取到一个方法中
-*       2.抽取的方法需要用synchronized 关键字修饰
-*
+*       2.抽取的方法需要用synchronized 关键字修饰   选中的代码块  Ctrl+alt+m  快捷键
+ *
 *   定义一个同步方法
 *   同步方法也能把方法内的代码块锁住
 *   只让一个线程执行
@@ -18,7 +18,7 @@ package com.itxiaozhou.thread.demo8.Synchronized;
 *
 *
 * */
-
+@SuppressWarnings("all")
 public class RunnableImpl implements Runnable{
 
     private static int ticket = 100;//定义票数有100张票
@@ -60,4 +60,7 @@ public class RunnableImpl implements Runnable{
             }
         }
     }
+
+
+
 }

@@ -1,8 +1,9 @@
 package com.itxiaozhou.demo2.Recursion;
 
 /*
-* 遍历文件下所有的文件夹和文件
-* */
+ * 遍历文件下所有的文件夹和文件
+ * */
+
 import java.io.File;
 
 public class Demo4DiGui {
@@ -16,9 +17,9 @@ public class Demo4DiGui {
         //遍历目录
         File[] files = f.listFiles();
         for (File file : files) {
-            if(file.isDirectory()){
+            if (file.isDirectory()) {
                 getAllFile(file);
-            }else {
+            } else {
                 System.out.println(file);
             }
         }

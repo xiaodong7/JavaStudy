@@ -28,10 +28,10 @@ public class Demo2InputStream {
         System.out.println(new String(bytes));*/
 
         byte[] bytes = new byte[1024];
-        int len =0;
-        while((len=fis.read(bytes))!= -1){
+        int len;
+        while ((len = fis.read(bytes)) != -1) {
             //System.out.println(new String(bytes));
-            System.out.println(new String(bytes,0,len));
+            System.out.println(new String(bytes, 0, len));
         }
         fis.close();
     }
